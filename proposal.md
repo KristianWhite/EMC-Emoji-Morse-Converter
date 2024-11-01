@@ -4,27 +4,27 @@
 https://github.com/KristianWhite/Morse-Converter.git
 
 ## Description
-The Morse converter is a program that behaves like a Morse code receiver, converting text characters into words. I tend to utilize this as quick education tool for those who want to learn or play around more with the concept of Morse code.
+The Emoji Morse converter is a program that behaves like a Morse code receiver, converting text characters into words. However, it switches things up by using emojis instead of dots and dashes. I will utilize this as a quick educational tool for those who want to learn about encrypting or play around more about Morse code and how it is translated.
 
 ## Features
 - Feature 1
-	- Uses characters like the dot and dashes as input
+	- Uses characters like the emojis as input
 - Feature 2
-	- Converts the following inputs in into letter characters.
+	- Converts the following inputs into letter characters.
 - Feature N 
-	- Short explaination of how it will be executed.
+	- Display the text on a screen after typing the input.
 
 ## Challenges
 - Research on Morse Code
 - Research on how the code is transferred into words
-- Short sentence of any skill or topic that needs to be learnt or researched.
+- Provide a function that sends a single character but keeps it
 
 ## Outcomes
 Ideal Outcome:
-- Briefly describe what is the ideal outcome?
+- A screen that displays the conversion of the input of emojis into stylized letter characters
 
 Minimal Viable Outcome:
-- Briefly describe the bare essential for a good working outcome?
+- A program that converts the input of emojis into letter characters
 
 ## Milestones
 
