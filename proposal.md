@@ -4,19 +4,19 @@
 https://github.com/KristianWhite/Morse-Converter.git
 
 ## Description
-The Morse convertor is a program that behaves like a Morse code receiver, converting text characters into words.
+The Morse converter is a program that behaves like a Morse code receiver, converting text characters into words. I tend to utilize this as quick education tool for those who want to learn or play around more with the concept of Morse code.
 
 ## Features
 - Feature 1
-	- Short explaination of how it will be executed.
+	- Uses characters like the dot and dashes as input
 - Feature 2
-	- Short explaination of how it will be executed.
+	- Converts the following inputs in into letter characters.
 - Feature N 
 	- Short explaination of how it will be executed.
 
 ## Challenges
-- Short sentence of any skill or topic that needs to be learnt or researched.
-- Short sentence of any skill or topic that needs to be learnt or researched.
+- Research on Morse Code
+- Research on how the code is transferred into words
 - Short sentence of any skill or topic that needs to be learnt or researched.
 
 ## Outcomes
