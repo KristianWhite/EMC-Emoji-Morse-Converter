@@ -1,4 +1,4 @@
-# Morse Converter
+# EMC: Emoji Morse Converter
 
 ## Repository
 https://github.com/KristianWhite/Morse-Converter.git
