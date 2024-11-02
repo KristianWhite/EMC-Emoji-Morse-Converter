@@ -33,8 +33,8 @@ Minimal Viable Outcome:
   2. Create a list containing all the alphabets and special characters
 
 - Week 2
-  1. Create and implement a function that converts the emojis to there
-  2. Goal 2
+  1. Create and implement a function that converts the emojis to each proper letter or character
+  2. Make sure no error is present or that the code is running correctly
 
 - Week N (Final)
   1. Goal 1
