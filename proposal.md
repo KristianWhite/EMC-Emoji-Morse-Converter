@@ -29,11 +29,11 @@ Minimal Viable Outcome:
 ## Milestones
 
 - Week 1
-  1. Goal 1
-  2. Goal 2
+  1. Create a list containing a selection of emojis that match the first letter of an emotion to convert
+  2. Create a list containing all the alphabets and special characters
 
 - Week 2
-  1. Goal 1
+  1. Create and implement a function that converts the emojis to there
   2. Goal 2
 
 - Week N (Final)
