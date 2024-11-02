@@ -1,7 +1,7 @@
 # EMC: Emoji Morse Converter
 
 ## Repository
-https://github.com/KristianWhite/Morse-Converter.git
+https://github.com/KristianWhite/EMC-Emoji-Morse-Converter.git
 
 ## Description
 The Emoji Morse converter is a program that behaves like a Morse code receiver, converting text characters into words. However, it switches things up by using emojis instead of dots and dashes. I will utilize this as a quick educational tool for those who want to learn about encrypting or play around more about Morse code and how it is translated.
