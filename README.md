@@ -5,6 +5,6 @@
 Demo Video: <URL>
 
 ## GitHub Repository
-GitHub Repo: <URL>
+GitHub Repo: gh repo clone KristianWhite/EMC-Emoji-Morse-Converter
 
 ## Description
