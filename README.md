@@ -1,4 +1,4 @@
-﻿# Morse-Converter
+﻿# EMC: Emoji Morse Converter
 # PROJECT TITLE
 
 ## Demo
