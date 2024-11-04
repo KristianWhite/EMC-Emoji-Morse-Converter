@@ -37,5 +37,5 @@ Minimal Viable Outcome:
   2. Make sure no error is present or that the code is running correctly
 
 - Week N (Final)
-  1. Goal 1
+  1. Use the pygame plugin to display a screen for the letters to show on
   2. Goal 2
