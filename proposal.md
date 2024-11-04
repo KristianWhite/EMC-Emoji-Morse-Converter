@@ -38,4 +38,4 @@ Minimal Viable Outcome:
 
 - Week N (Final)
   1. Use the pygame plugin to display a screen for the letters to show on
-  2. Goal 2
+  2. Think of a creative way to displsy the converted text
