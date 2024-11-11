@@ -1,15 +1,14 @@
 
 
 def main():
-    message = "Alcala - Harzgai Rocky Hill"
-    result = letter_to_emoji(message.upper())
-    print (result)
-    message = "😠 "
-    result = emoji_to_letter(message)
-    print (result)
-    #message = input("User Code:")
-    #encrypted_ms = letter_to_emoji(message)
-    #print(encrypted_ms)
+    mode_switch()
+    #message = "Alcala - Harzgai Rocky Hill"
+    #result = letter_to_emoji(message.upper())
+    #print (result)
+    #message = "😠 "
+    #result = emoji_to_letter(message)
+    #print (result)
+
 
 morse_dict = {'A': '😠', 'B': '😁', 'C': '🥶', 'D': '🥸', 'E': '😑', 'F': '😘', 'G': '😀', 'H': '....',
     'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.',
@@ -69,7 +68,24 @@ def emoji_to_letter(message):
 
 
 def mode_switch():
-    ...
+    
+    
+    Encrypt_mode=False
+    #Deciph_mode=False
+    
+    
+    
+    #Deciph_ms = emoji_to_letter(message.upper())
+    #Deciph = Deciph_ms
+    
+    Mode = input ("Choose modes: Encrypt or Deciph:")
+    if Encrypt_mode == False:
+        if Mode == "Encrypt":
+            Encrypt_mode=True
+    while Encrypt_mode == True:
+        message = input ("Type Message: ")
+        encrypted_ms = letter_to_emoji(message.upper())
+        return print(encrypted_ms)
 
 
 if __name__ == "__main__":
