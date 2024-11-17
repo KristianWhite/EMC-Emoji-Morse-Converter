@@ -1,7 +1,23 @@
+import pygame
+import sys
+import pygame_gui
 
+pygame.init()
+pygame.display.set_caption("Rain")
+WIDTH, HEIGHT = (800, 600)
+SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
+
+MANAGER = pygame_gui.UIManager((WIDTH, HEIGHT))
+CLOCK = pygame.time.Clock()
+
+TEXT_INPUT = pygame_gui.elements.UITextEntryLine(relative_rect=pygame.Rect((350, 275), (900, 50), manager=MANAGER,
+                                                                        object_id="#main_text_entry"))
 
 def main():
+    
     mode_switch()
+    
+    
     #message = "Alcala - Harzgai Rocky Hill"
     #result = letter_to_emoji(message.upper())
     #print (result)
@@ -73,7 +89,22 @@ def mode_switch():
     Encrypt_mode=False
     Deciph_mode=False
     
-    
+    while True:
+        UI_REFRESH_RATE = CLOCK.tick(60)/1000
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                
+                sys.exit()
+                
+                MANAGER.process_events(event) 
+        MANAGER.update(UI_REFRESH_RATE)
+        
+        SCREEN.fill("white")
+        
+        MANAGER.draw_ui(SCREEN)
+        
+        pygame.display.update()
     
     #Deciph_ms = emoji_to_letter(message.upper())
     #Deciph = Deciph_ms
@@ -93,6 +124,7 @@ def mode_switch():
         message = input ("Type Emoji: ")
         Deciph_ms = emoji_to_letter(message.upper())
         return print(Deciph_ms)
+
 
 
 if __name__ == "__main__":
