@@ -1,26 +1,32 @@
-import textwrap
 import pygame
 import pygame.freetype
-import emoji
+
+
 
 def main():
     pygame.init()
     pygame.font.init()
     
-    #Display Screen
+    # Display Screen
     pygame.display.set_caption("EMC")
     resolution = (800, 600)
     screen = pygame.display.set_mode(resolution)
+    # Load new icon image
+    new_icon = pygame.image.load(r"C:\Users\Krist\Documents\Python\ANGM2305\EMC-Emoji-Morse-Converter\src\smilley.ico")
+    pygame.display.set_icon(new_icon)
     
-    #Run 
+    # Run mode_switch
     mode_switch(screen)
     
+    # Main event loop
     running = True
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
     pygame.quit()
+
+
 
 
 morse_dict = {'A': '😠', 'B': '😁', 'C': '🥶', 'D': '🥸', 'E': '😑', 'F': '😂', 'G': '😀', 'H': '🙂‍↔️.',
@@ -95,11 +101,11 @@ def mode_switch(screen):
     
     input_active = True
     
-    #
+    
     while input_active:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                pygame.quit()
+                
                 return
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
@@ -110,9 +116,11 @@ def mode_switch(screen):
                     Mode += event.unicode
         
         # Render the text
-        screen.fill((0, 0, 0))
+        screen.fill("red")
         draw_text("Type encrypt to Convert:", Input_font, (255, 255, 255), 260, 100)
         pygame.draw.rect(screen, "gray", (150,150,500,30), width = 5, border_radius = 10)
+        pygame.draw.circle(screen, "gray", (400,350), 60, 0, False, False, False, False)
+        pygame.draw.circle(screen, "black", (400,350), 30, 0, False, False, False, False)
         draw_text(Mode, Input_font, (255, 255, 255), 260, 155)
         pygame.display.flip()
     
@@ -126,7 +134,6 @@ def mode_switch(screen):
     while input_active:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                pygame.quit()
                 return
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
@@ -145,12 +152,12 @@ def mode_switch(screen):
     
     # Display the edited message
     if Encrypt_mode:
-        Size = 10
+        Size = ""
         screen.fill((0, 0, 0))
         encrypted_message = letter_to_emoji(message.upper())
         pygame.draw.rect(screen, "gray", (30,200,750,190), width = 95, border_radius = 100)
         draw_text("Encrypted Message:", Input_font, "white", 100, 100)
-        emoji_text, rect = Output_font.render(encrypted_message, "white",Size)
+        emoji_text, rect = Output_font.render(encrypted_message, "white",None)
         rect.center = screen.get_rect().center
         
         screen.blit(emoji_text, rect)
@@ -198,5 +205,7 @@ def text_box(screen):
         pygame.draw.rect(screen, color, input_box, 2)
         pygame.display.flip()
 
+
+
 if __name__ == "__main__":
-        main()
+    main()
