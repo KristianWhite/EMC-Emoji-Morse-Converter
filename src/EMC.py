@@ -1,5 +1,6 @@
 import pygame
 import pygame.freetype
+import turtle as t
 
 
 
@@ -29,14 +30,14 @@ def main():
 
 
 
-morse_dict = {'A': '😠', 'B': '😁', 'C': '🥶', 'D': '🥸', 'E': '😑', 'F': '😂', 'G': '😀', 'H': '🙂‍↔️.',
-    'I': '☝️', 'J': '🧑‍⚖️', 'K': '😗', 'L': '🤥', 'M': '🤑', 'N': '😐', 'O': '🧡', 'P': '😔',
-    'Q': '❓', 'R': '🤖', 'S': '🙂', 'T': '👍', 'U': '🙃', 'V': '✌️', 'W': '🥴', 'X': '🩻',
-    'Y': '🥱', 'Z': '🤪', '0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-',
-    '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.', '.': '.-.-.-', ',': '--..--',
-    '?': '..--..', "'": '.----.', '!': '-.-.--', '/': '-..-.', '(': '-.--.', ')': '-.--.-', '&': '.-...',
-    ':': '---...', ';': '-.-.-.', '=': '-...-', '+': '.-.-.', '-': '-....-', '_': '..--.-', '"': '.-..-.',
-    '$': '...-..-', '@': '.--.-.', ' ': '/'}
+morse_dict = {'A': '😠', 'B': '😁', 'C': '😢', 'D': '🤤', 'E': '😑', 'F': '😂', 'G': '😀', 'H': '😉',
+    'I': '🤧', 'J': '😄', 'K': '😗', 'L': '🤥', 'M': '🤑', 'N': '😐', 'O': '😇', 'P': '😔',
+    'Q': '❓', 'R': '🤖', 'S': '🙂', 'T': '👍', 'U': '🙃', 'V': '🤢', 'W': '🙃', 'X': '🎄',
+    'Y': '😭', 'Z': '😴', '0': '🕛', '1': '🥇', '2': '🥈', '3': '🥉', '4': '🍀',
+    '5': '🕔', '6': '🕕', '7': '⏰', '8': '🎱', '9': '🕘', '.': '🫠', ',': '💭',
+    '?': '🌛', "'": '🤗', '!': '🤩', '/': '🫤', '(': '😗.', ')': '😙', '&': '💢',
+    ':': '😊', ';': '🤯', '=': '😋', '+': '😵', '-': '👎', '_': '👻', '"': '☠️',
+    '$': '💵', '@': '🅰️', ' ': '🎈'}
 
 def letter_to_emoji(message):
     
@@ -92,7 +93,7 @@ def mode_switch(screen):
     Mode = ""
 
     # Initialize the font here
-    Input_font = pygame.font.Font(None, 32)  # Use a default font for now
+    Input_font = pygame.font.Font("MigaeSemibold-3zd2M.otf", 32)  # Use a default font for now
     Output_font = pygame.freetype.SysFont("segoeuisymbol", 50)
 
     def draw_text(text, Input_font, text_col, x, y):
@@ -117,10 +118,12 @@ def mode_switch(screen):
         
         # Render the text
         screen.fill("red")
-        draw_text("Type encrypt to Convert:", Input_font, (255, 255, 255), 260, 100)
-        pygame.draw.rect(screen, "gray", (150,150,500,30), width = 5, border_radius = 10)
-        pygame.draw.circle(screen, "gray", (400,350), 60, 0, False, False, False, False)
-        pygame.draw.circle(screen, "black", (400,350), 30, 0, False, False, False, False)
+        draw_text("Type encrypt to Convert:", Input_font, (255, 255, 255), 210, 100)
+        pygame.draw.rect(screen, "gray", (150,150,490,40), width = 5, border_radius = 10)
+        pygame.draw.circle(screen, "yellow", (400,350), 60, 0, False, False, False, False)
+        pygame.draw.circle(screen, "black", (370,340), 15, 0, False, False, False, False)
+        pygame.draw.circle(screen, "black", (430,340), 15, 0, False, False, False, False)
+        pygame.draw.arc(screen, "black", (360, 320, 80, 80), 3.14, 2*3.14, width = 5)
         draw_text(Mode, Input_font, (255, 255, 255), 260, 155)
         pygame.display.flip()
     
@@ -134,6 +137,7 @@ def mode_switch(screen):
     while input_active:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                
                 return
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
@@ -144,15 +148,15 @@ def mode_switch(screen):
                     message += event.unicode
         
         # Render the text
-        screen.fill((0, 0, 0))
-        draw_text("Type your message:", Input_font, (255, 255, 255), 260, 100)
-        draw_text(message, Input_font, (255, 255, 255), 260, 150)
+        screen.fill("blue")
+        draw_text("Type your message (Maximum: 17 characters):", Input_font, (255, 255, 255), 70, 100)
+        pygame.draw.rect(screen, "gray", (150,150,490,40), width = 5, border_radius = 10)
+        draw_text(message, Input_font, (255, 255, 255), 200, 150)
         
         pygame.display.flip()
     
     # Display the edited message
     if Encrypt_mode:
-        Size = ""
         screen.fill((0, 0, 0))
         encrypted_message = letter_to_emoji(message.upper())
         pygame.draw.rect(screen, "gray", (30,200,750,190), width = 95, border_radius = 100)
@@ -204,7 +208,6 @@ def text_box(screen):
         screen.blit(txt_surface, (input_box.x+5, input_box.y+5))
         pygame.draw.rect(screen, color, input_box, 2)
         pygame.display.flip()
-
 
 
 if __name__ == "__main__":
