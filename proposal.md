@@ -21,10 +21,10 @@ The Emoji Morse converter is a program that behaves like a Morse code receiver, 
 
 ## Outcomes
 Ideal Outcome:
-- A screen that displays the conversion of the input of emojis into stylized letter characters
+- A screen that displays the conversion of the input of emojis from stylized letter characters
 
 Minimal Viable Outcome:
-- A program that converts the input of emojis into letter characters
+- A program that converts the input of emojis from letter characters
 
 ## Milestones
 
@@ -37,5 +37,5 @@ Minimal Viable Outcome:
   2. Make sure no error is present or that the code is running correctly
 
 - Week N (Final)
-  1. Use the pygame plugin to display a screen for the letters to show on
+  1. Use the pygame plugin to display a screen for the emojis to show on
   2. Think of a creative way to displsy the converted text
